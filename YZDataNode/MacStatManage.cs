@@ -36,7 +36,7 @@ namespace YZDataNode
             if (string.IsNullOrEmpty(msisdn))
                 return false;
 
-            //非手机号 则不处理
+            //非手机号则不处理
             if (!SignalDefine.IsMsisdnOfCN(msisdn))
                 return false;
 
@@ -54,7 +54,6 @@ namespace YZDataNode
             return true;
         }
 
-        //将2小时数据保存到文件
         private void StatToFile()
         {
             DateTime curTime = _endStatTime;
@@ -84,7 +83,7 @@ namespace YZDataNode
             stat.StartTime = _startStatTime;
             stat.EndTime = _endStatTime;
             stat.ListCgiStat = cgiStat.Values.ToList();//手机号、时间、访问次数
-            OnStatSaveToFile?.Invoke(stat);//？？？stat  ---info
+            OnStatSaveToFile?.Invoke(stat);//跳转到_macStatManage_OnStatSaveToFile   public void AddStat(CgiStatToFile info)
         }
 
         private bool UpdateSignalTime(DateTime timeStamp)
