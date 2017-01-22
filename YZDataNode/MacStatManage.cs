@@ -54,7 +54,6 @@ namespace YZDataNode
             return true;
         }
 
-        //将2小时数据保存到文件
         private void StatToFile()
         {
             DateTime curTime = _endStatTime;
