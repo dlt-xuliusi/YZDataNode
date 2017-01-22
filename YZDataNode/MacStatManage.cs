@@ -77,7 +77,7 @@ namespace YZDataNode
                     statInfo.AddMsisdn(info._msisdn, stay.StaySecond(curTime), stay.VisiCount);//添加手机号、时间、访问次数
                 }
 
-                info.NextStat(curTime);
+                info.NextStat(curTime);//清理缓存
             }
 
             CgiStatToFile stat = new CgiStatToFile() { };
