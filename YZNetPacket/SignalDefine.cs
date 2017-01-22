@@ -13,7 +13,7 @@ namespace YZNetPacket
         public string msisdn = string.Empty;
         public string msisdn2 = string.Empty;
 
-        public UInt32 areaCode; //区号
+        public UInt32 areaCode;//区号
         public EN_MsisdnIndex msisdnIndex;
         public EN_SortStat sortStat;
 
@@ -77,7 +77,7 @@ namespace YZNetPacket
 
         public void ParseAction()
         {
-            //两个手机号 才值得分析
+            //两个手机号才值得分析
             if (!IsHaveTwoMsisdn())
             {
                 msisdnIndex = EN_MsisdnIndex.first;
